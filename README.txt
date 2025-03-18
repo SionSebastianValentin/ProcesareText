@@ -1,0 +1,1 @@
+Fisierul "cuvinte.txt" contine 117 cuvinte.
