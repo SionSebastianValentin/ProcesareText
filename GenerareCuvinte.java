@@ -18,7 +18,7 @@ public class GenerareCuvinte {
                 words.add(line);
             }
         } catch (IOException e) {
-            System.err.println("Eroare la citirea fișierului: " + e.getMessage());
+            System.err.println("Eroare la citirea fisierului: " + e.getMessage());
         }
 
         try (FileWriter writer = new FileWriter(outputFileName)) {
@@ -27,9 +27,9 @@ public class GenerareCuvinte {
                     writer.write(word + " ");
                 }
             }
-            System.out.println("Fișierul " + outputFileName + " cu cuvintele multiplicate a fost generat cu succes!");
+            System.out.println("Fisierul " + outputFileName + " cu cuvintele multiplicate a fost generat cu succes!");
         } catch (IOException e) {
-            System.err.println("Eroare la scrierea fișierului: " + e.getMessage());
+            System.err.println("Eroare la scrierea fisierului: " + e.getMessage());
         }
     }
 }
