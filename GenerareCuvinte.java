@@ -9,8 +9,8 @@ public class GenerareCuvinte {
     public static void main(String[] args) {
         List<String> words = new ArrayList<>();
         String inputFileName = "cuvinte.txt";
-        String outputFileName = "DataIN.txt";
-        int multiplier = 5000;
+        String outputFileName = "DataIN3.txt";
+        int multiplier = 10000;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
             String line;
