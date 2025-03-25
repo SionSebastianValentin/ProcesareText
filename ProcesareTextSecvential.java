@@ -4,9 +4,12 @@ import java.util.Map;
 
 public class ProcesareTextSecvential {
     public static void main(String[] args) {
-        String fileName = "DataIN3.txt";
+        String fileName = "DataIN.txt";
         long startTime = System.nanoTime();
         Map<String, Integer> wordFrequencies = new HashMap<>();
+        File file = new File(fileName);
+        long fileSize = file.length();
+        double fileSizeMB = fileSize / Math.pow(1024,2);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -27,5 +30,6 @@ public class ProcesareTextSecvential {
         long endTime   = System.nanoTime();
         long totalTime = endTime - startTime;
         System.out.println(totalTime * Math.pow(10, -9));
+        System.out.printf("Dimensiunea fisierului este: %.2f MB%n", fileSizeMB);
     }
 }
